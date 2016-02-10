@@ -16,13 +16,13 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        double LongBottomBase;
-        double WidthBottomBase;
-        double LongUpperBase;
-        double WidthUpperBase;
-        double OffsetLong;
-        double OffsetWidth;
-        double Height;
+        public static double LongBottomBase;
+        public static double WidthBottomBase;
+        public static double LongUpperBase;
+        public static double WidthUpperBase;
+        public static double OffsetLong;
+        public static double OffsetWidth;
+        public static double Height;
 
         private void ReadTextBox()//считываем с формы и Convert.ToDouble
         {
@@ -33,6 +33,11 @@ namespace WindowsFormsApplication1
             OffsetLong = Convert.ToDouble(textBoxOffsetLong.Text);
             OffsetWidth = Convert.ToDouble(textBoxOffsetWidth.Text);
             Height = Convert.ToDouble(textBoxHeight.Text);
-        }       
+        }
+
+        private void GetValues()
+        {
+            Model obj = new Model();
+        }
     }
 }
