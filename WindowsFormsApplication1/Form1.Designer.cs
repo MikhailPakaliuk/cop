@@ -31,9 +31,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBoxLongBottomBase = new System.Windows.Forms.TextBox();
-            this.textBoxWidhtBottomBase = new System.Windows.Forms.TextBox();
+            this.textBoxWidthBottomBase = new System.Windows.Forms.TextBox();
             this.textBoxLongUpperBase = new System.Windows.Forms.TextBox();
-            this.textBoxWidhtUpperBase = new System.Windows.Forms.TextBox();
+            this.textBoxWidthUpperBase = new System.Windows.Forms.TextBox();
             this.textBoxOffsetLong = new System.Windows.Forms.TextBox();
             this.textBoxOffsetWidth = new System.Windows.Forms.TextBox();
             this.labelLongBottomBase = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.labelOffsetLong = new System.Windows.Forms.Label();
             this.labelOffsetWidth = new System.Windows.Forms.Label();
             this.labelHeight = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,14 +72,13 @@
             this.textBoxLongBottomBase.Name = "textBoxLongBottomBase";
             this.textBoxLongBottomBase.Size = new System.Drawing.Size(65, 20);
             this.textBoxLongBottomBase.TabIndex = 2;
-            this.textBoxLongBottomBase.TextChanged += new System.EventHandler(this.textBoxLongBase_TextChanged);
             // 
-            // textBoxWidhtBottomBase
+            // textBoxWidthBottomBase
             // 
-            this.textBoxWidhtBottomBase.Location = new System.Drawing.Point(428, 28);
-            this.textBoxWidhtBottomBase.Name = "textBoxWidhtBottomBase";
-            this.textBoxWidhtBottomBase.Size = new System.Drawing.Size(65, 20);
-            this.textBoxWidhtBottomBase.TabIndex = 3;
+            this.textBoxWidthBottomBase.Location = new System.Drawing.Point(428, 28);
+            this.textBoxWidthBottomBase.Name = "textBoxWidthBottomBase";
+            this.textBoxWidthBottomBase.Size = new System.Drawing.Size(65, 20);
+            this.textBoxWidthBottomBase.TabIndex = 3;
             // 
             // textBoxLongUpperBase
             // 
@@ -88,12 +87,12 @@
             this.textBoxLongUpperBase.Size = new System.Drawing.Size(65, 20);
             this.textBoxLongUpperBase.TabIndex = 4;
             // 
-            // textBoxWidhtUpperBase
+            // textBoxWidthUpperBase
             // 
-            this.textBoxWidhtUpperBase.Location = new System.Drawing.Point(428, 71);
-            this.textBoxWidhtUpperBase.Name = "textBoxWidhtUpperBase";
-            this.textBoxWidhtUpperBase.Size = new System.Drawing.Size(65, 20);
-            this.textBoxWidhtUpperBase.TabIndex = 5;
+            this.textBoxWidthUpperBase.Location = new System.Drawing.Point(428, 71);
+            this.textBoxWidthUpperBase.Name = "textBoxWidthUpperBase";
+            this.textBoxWidthUpperBase.Size = new System.Drawing.Size(65, 20);
+            this.textBoxWidthUpperBase.TabIndex = 5;
             // 
             // textBoxOffsetLong
             // 
@@ -172,16 +171,16 @@
             this.labelHeight.TabIndex = 14;
             this.labelHeight.Text = "Высота";
             // 
-            // textBox1
+            // textBoxHeight
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 20);
-            this.textBox1.TabIndex = 15;
+            this.textBoxHeight.Location = new System.Drawing.Point(177, 164);
+            this.textBoxHeight.Name = "textBoxHeight";
+            this.textBoxHeight.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHeight.TabIndex = 15;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxHeight);
             this.groupBox1.Controls.Add(this.labelHeight);
             this.groupBox1.Controls.Add(this.labelOffsetWidth);
             this.groupBox1.Controls.Add(this.labelOffsetLong);
@@ -191,9 +190,9 @@
             this.groupBox1.Controls.Add(this.labelLongBottomBase);
             this.groupBox1.Controls.Add(this.textBoxOffsetWidth);
             this.groupBox1.Controls.Add(this.textBoxOffsetLong);
-            this.groupBox1.Controls.Add(this.textBoxWidhtUpperBase);
+            this.groupBox1.Controls.Add(this.textBoxWidthUpperBase);
             this.groupBox1.Controls.Add(this.textBoxLongUpperBase);
-            this.groupBox1.Controls.Add(this.textBoxWidhtBottomBase);
+            this.groupBox1.Controls.Add(this.textBoxWidthBottomBase);
             this.groupBox1.Controls.Add(this.textBoxLongBottomBase);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -222,9 +221,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBoxLongBottomBase;
-        private System.Windows.Forms.TextBox textBoxWidhtBottomBase;
+        private System.Windows.Forms.TextBox textBoxWidthBottomBase;
         private System.Windows.Forms.TextBox textBoxLongUpperBase;
-        private System.Windows.Forms.TextBox textBoxWidhtUpperBase;
+        private System.Windows.Forms.TextBox textBoxWidthUpperBase;
         private System.Windows.Forms.TextBox textBoxOffsetLong;
         private System.Windows.Forms.TextBox textBoxOffsetWidth;
         private System.Windows.Forms.Label labelLongBottomBase;
@@ -234,7 +233,7 @@
         private System.Windows.Forms.Label labelOffsetLong;
         private System.Windows.Forms.Label labelOffsetWidth;
         private System.Windows.Forms.Label labelHeight;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxHeight;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }

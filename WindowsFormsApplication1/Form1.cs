@@ -16,9 +16,23 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void textBoxLongBase_TextChanged(object sender, EventArgs e)
-        {
+        double LongBottomBase;
+        double WidthBottomBase;
+        double LongUpperBase;
+        double WidthUpperBase;
+        double OffsetLong;
+        double OffsetWidth;
+        double Height;
 
-        } 
+        private void ReadTextBox()//считываем с формы и Convert.ToDouble
+        {
+            LongBottomBase = Convert.ToDouble(textBoxLongBottomBase.Text);
+            WidthBottomBase = Convert.ToDouble(textBoxWidthBottomBase.Text);
+            LongUpperBase = Convert.ToDouble(textBoxLongUpperBase.Text);
+            WidthUpperBase = Convert.ToDouble(textBoxWidthUpperBase.Text);
+            OffsetLong = Convert.ToDouble(textBoxOffsetLong.Text);
+            OffsetWidth = Convert.ToDouble(textBoxOffsetWidth.Text);
+            Height = Convert.ToDouble(textBoxHeight.Text);
+        }       
     }
 }
