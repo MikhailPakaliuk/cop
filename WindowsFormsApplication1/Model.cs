@@ -16,16 +16,16 @@ namespace WindowsFormsApplication1
         double SouthEast;
         double SouthWest;
 
-       public Model()
+        public Model(double LongBottomBase, double WidthBottomBase, double LongUpperBase, double WidthUpperBase, double OffsetLong, double OffsetWidth, double Height)
         {
-            North = Math.Sqrt(Math.Pow(Form1.OffsetWidth,2) + Math.Pow(Form1.Height,2));
-            South = Math.Sqrt(Math.Pow(Form1.WidthBottomBase-(Form1.OffsetWidth+Form1.WidthUpperBase), 2) + Math.Pow(Form1.Height, 2));
-            East = Math.Sqrt(Math.Pow(Form1.LongBottomBase - (Form1.OffsetLong + Form1.LongUpperBase), 2) + Math.Pow(Form1.Height, 2));
-            West = Math.Sqrt(Math.Pow(Form1.OffsetLong, 2) + Math.Pow(Form1.Height, 2));
-            NorthEast = Math.Sqrt(East * East + Math.Pow(Form1.OffsetWidth, 2));
-            NorthWest = Math.Sqrt(North * North + Math.Pow(Form1.OffsetLong, 2));
-            SouthEast = Math.Sqrt(East * East + Math.Pow(Form1.WidthBottomBase - (Form1.WidthUpperBase + Form1.OffsetWidth), 2));
-            SouthWest = Math.Sqrt(South * South + Math.Pow(Form1.OffsetLong, 2));
+            North = Math.Sqrt(Math.Pow(OffsetWidth,2) + Math.Pow(Height,2));
+            South = Math.Sqrt(Math.Pow(WidthBottomBase-(OffsetWidth+WidthUpperBase), 2) + Math.Pow(Height, 2));
+            East = Math.Sqrt(Math.Pow(LongBottomBase - (OffsetLong + LongUpperBase), 2) + Math.Pow(Height, 2));
+            West = Math.Sqrt(Math.Pow(OffsetLong, 2) + Math.Pow(Height, 2));
+            NorthEast = Math.Sqrt(East * East + Math.Pow(OffsetWidth, 2));
+            NorthWest = Math.Sqrt(North * North + Math.Pow(OffsetLong, 2));
+            SouthEast = Math.Sqrt(East * East + Math.Pow(WidthBottomBase - (WidthUpperBase + OffsetWidth), 2));
+            SouthWest = Math.Sqrt(South * South + Math.Pow(OffsetLong, 2));
         }
     }
 }
