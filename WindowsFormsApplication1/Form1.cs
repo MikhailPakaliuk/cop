@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
 
         private void GetValues()
         {
-            Model obj = new Model();
+            Model obj = new Model(LongBottomBase, WidthBottomBase, LongUpperBase, WidthUpperBase, OffsetLong, OffsetWidth, Height);
         }
 
        
