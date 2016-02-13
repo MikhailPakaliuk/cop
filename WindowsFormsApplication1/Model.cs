@@ -7,14 +7,14 @@ namespace WindowsFormsApplication1
 {
     class Model
     {
-        double North;
-        double South;//юг
-        double East; 
-        double West;//запад 
-        double NorthEast;
-        double NorthWest;
-        double SouthEast;
-        double SouthWest;
+       public double North;
+       public double South;//юг
+       public double East;
+       public double West;//запад 
+       public double NorthEast;
+       public double NorthWest;
+       public double SouthEast;
+       public double SouthWest;
 
         public Model(double LongBottomBase, double WidthBottomBase, double LongUpperBase, double WidthUpperBase, double OffsetLong, double OffsetWidth, double Height)
         {
