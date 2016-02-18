@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -89,18 +90,20 @@
             this.labelA1A = new System.Windows.Forms.Label();
             this.textBoxAB = new System.Windows.Forms.TextBox();
             this.labelAB = new System.Windows.Forms.Label();
+            this.pictureBoxPiramide = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(367, 12);
+            this.tabControl1.Location = new System.Drawing.Point(417, 12);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -148,6 +151,7 @@
             this.textBoxHeight.Name = "textBoxHeight";
             this.textBoxHeight.Size = new System.Drawing.Size(65, 20);
             this.textBoxHeight.TabIndex = 15;
+            this.textBoxHeight.Text = "12";
             // 
             // labelHeight
             // 
@@ -190,9 +194,9 @@
             this.labelLongUpperBase.AutoSize = true;
             this.labelLongUpperBase.Location = new System.Drawing.Point(8, 77);
             this.labelLongUpperBase.Name = "labelLongUpperBase";
-            this.labelLongUpperBase.Size = new System.Drawing.Size(152, 13);
+            this.labelLongUpperBase.Size = new System.Drawing.Size(155, 13);
             this.labelLongUpperBase.TabIndex = 10;
-            this.labelLongUpperBase.Text = "Длинна верхнего основания";
+            this.labelLongUpperBase.Text = "Длинна верх. основания (АВ)";
             // 
             // labelWidhtBottomBase
             // 
@@ -208,9 +212,9 @@
             this.labelLongBottomBase.AutoSize = true;
             this.labelLongBottomBase.Location = new System.Drawing.Point(11, 34);
             this.labelLongBottomBase.Name = "labelLongBottomBase";
-            this.labelLongBottomBase.Size = new System.Drawing.Size(149, 13);
+            this.labelLongBottomBase.Size = new System.Drawing.Size(152, 13);
             this.labelLongBottomBase.TabIndex = 8;
-            this.labelLongBottomBase.Text = "Длинна нижнего основания";
+            this.labelLongBottomBase.Text = "Длинна ниж. основания (АВ)";
             // 
             // textBoxOffsetWidth
             // 
@@ -218,6 +222,7 @@
             this.textBoxOffsetWidth.Name = "textBoxOffsetWidth";
             this.textBoxOffsetWidth.Size = new System.Drawing.Size(65, 20);
             this.textBoxOffsetWidth.TabIndex = 7;
+            this.textBoxOffsetWidth.Text = "2";
             // 
             // textBoxOffsetLong
             // 
@@ -225,6 +230,7 @@
             this.textBoxOffsetLong.Name = "textBoxOffsetLong";
             this.textBoxOffsetLong.Size = new System.Drawing.Size(65, 20);
             this.textBoxOffsetLong.TabIndex = 6;
+            this.textBoxOffsetLong.Text = "3";
             // 
             // textBoxWidthUpperBase
             // 
@@ -232,6 +238,7 @@
             this.textBoxWidthUpperBase.Name = "textBoxWidthUpperBase";
             this.textBoxWidthUpperBase.Size = new System.Drawing.Size(65, 20);
             this.textBoxWidthUpperBase.TabIndex = 5;
+            this.textBoxWidthUpperBase.Text = "4";
             // 
             // textBoxLongUpperBase
             // 
@@ -239,6 +246,7 @@
             this.textBoxLongUpperBase.Name = "textBoxLongUpperBase";
             this.textBoxLongUpperBase.Size = new System.Drawing.Size(65, 20);
             this.textBoxLongUpperBase.TabIndex = 4;
+            this.textBoxLongUpperBase.Text = "6";
             // 
             // textBoxWidthBottomBase
             // 
@@ -246,6 +254,7 @@
             this.textBoxWidthBottomBase.Name = "textBoxWidthBottomBase";
             this.textBoxWidthBottomBase.Size = new System.Drawing.Size(65, 20);
             this.textBoxWidthBottomBase.TabIndex = 3;
+            this.textBoxWidthBottomBase.Text = "8";
             // 
             // textBoxLongBottomBase
             // 
@@ -253,6 +262,7 @@
             this.textBoxLongBottomBase.Name = "textBoxLongBottomBase";
             this.textBoxLongBottomBase.Size = new System.Drawing.Size(65, 20);
             this.textBoxLongBottomBase.TabIndex = 2;
+            this.textBoxLongBottomBase.Text = "12";
             // 
             // buttonStop
             // 
@@ -277,6 +287,7 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -653,14 +664,25 @@
             this.labelAB.TabIndex = 0;
             this.labelAB.Text = "AB = ";
             // 
+            // pictureBoxPiramide
+            // 
+            this.pictureBoxPiramide.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPiramide.Image")));
+            this.pictureBoxPiramide.Location = new System.Drawing.Point(6, 30);
+            this.pictureBoxPiramide.Name = "pictureBoxPiramide";
+            this.pictureBoxPiramide.Size = new System.Drawing.Size(409, 235);
+            this.pictureBoxPiramide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPiramide.TabIndex = 18;
+            this.pictureBoxPiramide.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 413);
+            this.ClientSize = new System.Drawing.Size(960, 346);
+            this.Controls.Add(this.pictureBoxPiramide);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Form";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -668,6 +690,7 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -693,7 +716,6 @@
         private System.Windows.Forms.TextBox textBoxLongBottomBase;
         private System.Windows.Forms.Button buttonStop;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBoxN1N;
         private System.Windows.Forms.Label labelN1N;
@@ -735,6 +757,8 @@
         private System.Windows.Forms.Label labelA1A;
         private System.Windows.Forms.TextBox textBoxAB;
         private System.Windows.Forms.Label labelAB;
+        private System.Windows.Forms.PictureBox pictureBoxPiramide;
+        public System.Windows.Forms.TabPage tabPage2;
 
     }
 }

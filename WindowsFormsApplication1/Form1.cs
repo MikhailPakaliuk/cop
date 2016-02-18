@@ -69,8 +69,47 @@ namespace WindowsFormsApplication1
         {
             ReadTextBox();
             MakeTextBox(GetValues());
-        }
+            pictureBoxPiramide.Visible = false;
+            DrawRectangle();
 
-       
+        }
+        private void DrawRectangle()
+        {
+            int halfPoint11=12;
+            int halfPoint12=12;
+            int halfPoint21=390;
+            int halfPoint22=251;
+
+            int halfPoint31=150;
+            int halfPoint32=90;
+            int halfPoint41=100;
+            int halfPoint42 =50;
+
+
+            System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            System.Drawing.Graphics formGraphics;
+            formGraphics = this.CreateGraphics();
+
+            formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint11, halfPoint12, halfPoint21, halfPoint22));//прямоугольник
+            formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint31, halfPoint32, halfPoint41, halfPoint42));//
+            formGraphics.DrawLine(myPen, halfPoint11, halfPoint12, halfPoint31, halfPoint32); //линия
+            //formGraphics.DrawLine(myPen, halfPoint41, halfPoint32, halfPoint12, halfPoint21); //линия
+            //formGraphics.DrawLine(myPen, 12, 12, 60, 60); //линия
+            //formGraphics.DrawLine(myPen, halfPoint21, halfPoint22, halfPoint41, halfPoint42); //линия
+
+            //Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };//треугольник
+            //formGraphics.DrawPolygon(myPen, myPointArray);
+
+            myPen.Dispose();
+            formGraphics.Dispose();
+        }
+        //private void prLine()
+        //{
+        //    Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+        //    e.Graphics.DrawLine(pen, 20, 10, 300, 100);
+
+        //    Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };
+        //    myGraphics.DrawPolygon(myPen, myPointArray);
+        //}
     }
 }
