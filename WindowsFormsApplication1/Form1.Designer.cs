@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -149,7 +148,7 @@
             // 
             this.textBoxHeight.Location = new System.Drawing.Point(166, 167);
             this.textBoxHeight.Name = "textBoxHeight";
-            this.textBoxHeight.Size = new System.Drawing.Size(65, 20);
+            this.textBoxHeight.Size = new System.Drawing.Size(45, 20);
             this.textBoxHeight.TabIndex = 15;
             this.textBoxHeight.Text = "12";
             // 
@@ -192,7 +191,7 @@
             // labelLongUpperBase
             // 
             this.labelLongUpperBase.AutoSize = true;
-            this.labelLongUpperBase.Location = new System.Drawing.Point(8, 77);
+            this.labelLongUpperBase.Location = new System.Drawing.Point(5, 77);
             this.labelLongUpperBase.Name = "labelLongUpperBase";
             this.labelLongUpperBase.Size = new System.Drawing.Size(155, 13);
             this.labelLongUpperBase.TabIndex = 10;
@@ -210,7 +209,7 @@
             // labelLongBottomBase
             // 
             this.labelLongBottomBase.AutoSize = true;
-            this.labelLongBottomBase.Location = new System.Drawing.Point(11, 34);
+            this.labelLongBottomBase.Location = new System.Drawing.Point(8, 34);
             this.labelLongBottomBase.Name = "labelLongBottomBase";
             this.labelLongBottomBase.Size = new System.Drawing.Size(152, 13);
             this.labelLongBottomBase.TabIndex = 8;
@@ -220,7 +219,7 @@
             // 
             this.textBoxOffsetWidth.Location = new System.Drawing.Point(418, 120);
             this.textBoxOffsetWidth.Name = "textBoxOffsetWidth";
-            this.textBoxOffsetWidth.Size = new System.Drawing.Size(65, 20);
+            this.textBoxOffsetWidth.Size = new System.Drawing.Size(45, 20);
             this.textBoxOffsetWidth.TabIndex = 7;
             this.textBoxOffsetWidth.Text = "2";
             // 
@@ -228,7 +227,7 @@
             // 
             this.textBoxOffsetLong.Location = new System.Drawing.Point(166, 120);
             this.textBoxOffsetLong.Name = "textBoxOffsetLong";
-            this.textBoxOffsetLong.Size = new System.Drawing.Size(65, 20);
+            this.textBoxOffsetLong.Size = new System.Drawing.Size(45, 20);
             this.textBoxOffsetLong.TabIndex = 6;
             this.textBoxOffsetLong.Text = "3";
             // 
@@ -236,7 +235,7 @@
             // 
             this.textBoxWidthUpperBase.Location = new System.Drawing.Point(418, 74);
             this.textBoxWidthUpperBase.Name = "textBoxWidthUpperBase";
-            this.textBoxWidthUpperBase.Size = new System.Drawing.Size(65, 20);
+            this.textBoxWidthUpperBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxWidthUpperBase.TabIndex = 5;
             this.textBoxWidthUpperBase.Text = "4";
             // 
@@ -244,7 +243,7 @@
             // 
             this.textBoxLongUpperBase.Location = new System.Drawing.Point(166, 74);
             this.textBoxLongUpperBase.Name = "textBoxLongUpperBase";
-            this.textBoxLongUpperBase.Size = new System.Drawing.Size(65, 20);
+            this.textBoxLongUpperBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxLongUpperBase.TabIndex = 4;
             this.textBoxLongUpperBase.Text = "6";
             // 
@@ -252,7 +251,7 @@
             // 
             this.textBoxWidthBottomBase.Location = new System.Drawing.Point(418, 31);
             this.textBoxWidthBottomBase.Name = "textBoxWidthBottomBase";
-            this.textBoxWidthBottomBase.Size = new System.Drawing.Size(65, 20);
+            this.textBoxWidthBottomBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxWidthBottomBase.TabIndex = 3;
             this.textBoxWidthBottomBase.Text = "8";
             // 
@@ -260,7 +259,7 @@
             // 
             this.textBoxLongBottomBase.Location = new System.Drawing.Point(166, 31);
             this.textBoxLongBottomBase.Name = "textBoxLongBottomBase";
-            this.textBoxLongBottomBase.Size = new System.Drawing.Size(65, 20);
+            this.textBoxLongBottomBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxLongBottomBase.TabIndex = 2;
             this.textBoxLongBottomBase.Text = "12";
             // 
@@ -666,7 +665,7 @@
             // 
             // pictureBoxPiramide
             // 
-            this.pictureBoxPiramide.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPiramide.Image")));
+            this.pictureBoxPiramide.Image = global::WindowsFormsApplication1.Properties.Resources.pyramid19;
             this.pictureBoxPiramide.Location = new System.Drawing.Point(6, 30);
             this.pictureBoxPiramide.Name = "pictureBoxPiramide";
             this.pictureBoxPiramide.Size = new System.Drawing.Size(409, 235);
