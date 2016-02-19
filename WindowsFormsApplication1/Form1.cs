@@ -79,23 +79,24 @@ namespace WindowsFormsApplication1
             int halfPoint11 = 12;
             int halfPoint12 = 12;
             int halfPoint21 = 390;
-            int halfPoint22 = 251;
-
-            int halfPoint31 = 150;
-            int halfPoint32 = 130;
-            int halfPoint41 = 100;
-            int halfPoint42 = 50;
+            int halfPoint22 = Convert.ToInt16(Math.Truncate(halfPoint21 * WidthBottomBase / LongBottomBase));
+            //посволяет рисовать пропорционально входным данным
+            int halfPoint31 = Convert.ToInt16(Math.Truncate(halfPoint21 * OffsetLong / LongBottomBase));
+            int halfPoint32 = Convert.ToInt16(Math.Truncate(halfPoint22 * OffsetWidth / WidthBottomBase));
+            int halfPoint41 = Convert.ToInt16(Math.Truncate(halfPoint21 * LongUpperBase / LongBottomBase));
+            int halfPoint42 = Convert.ToInt16(Math.Truncate(halfPoint22 * WidthUpperBase / WidthBottomBase));
 
             System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
 
             formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint11, halfPoint12, halfPoint21, halfPoint22));//прямоугольник
-            formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint31, halfPoint32, halfPoint41, halfPoint42));//
-            formGraphics.DrawLine(myPen, halfPoint11, halfPoint12, halfPoint31, halfPoint32); //линия
-            formGraphics.DrawLine(myPen, halfPoint11 + halfPoint21, halfPoint12, halfPoint31 + halfPoint41, halfPoint32);
-            formGraphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42, halfPoint11, halfPoint12 + halfPoint22);
-            formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42, halfPoint11 + halfPoint21, halfPoint12 + halfPoint22);
+            formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint31, halfPoint32, halfPoint41, halfPoint42));
+
+            formGraphics.DrawLine(myPen, halfPoint11, halfPoint12, halfPoint31, halfPoint32); //линия nw
+            formGraphics.DrawLine(myPen, halfPoint21 + halfPoint11, halfPoint12, halfPoint31 + halfPoint41, halfPoint32);//ne
+            formGraphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42, halfPoint11, halfPoint22 + halfPoint12);//sw
+            formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42, halfPoint21 + halfPoint11, halfPoint22 + halfPoint12);//se
             myPen.Dispose();
             formGraphics.Dispose();
             //Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };//треугольник
