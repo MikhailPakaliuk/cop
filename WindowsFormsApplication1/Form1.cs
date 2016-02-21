@@ -42,20 +42,20 @@ namespace WindowsFormsApplication1
             textBoxCD.Text = Convert.ToString(LongBottomBase);
             textBoxDA.Text = Convert.ToString(WidthBottomBase);
 
-            textBoxA1A.Text = Convert.ToString(obj.SouthWest);//блок вывода левого! ребра
-            textBoxB1B.Text = Convert.ToString(obj.SouthEast);
-            textBoxC1C.Text = Convert.ToString(obj.NorthEast);
-            textBoxD1D.Text = Convert.ToString(obj.NorthWest);
+            textBoxA1A.Text = Convert.ToString(Math.Round(obj.SouthWest,4));//блок вывода левого! ребра
+            textBoxB1B.Text = Convert.ToString(Math.Round(obj.SouthEast,4));
+            textBoxC1C.Text = Convert.ToString(Math.Round(obj.NorthEast,4));
+            textBoxD1D.Text = Convert.ToString(Math.Round(obj.NorthWest,4));
 
             textBoxA1B1.Text = Convert.ToString(LongUpperBase);// блок  вывода верхнего основания
             textBoxB1C1.Text = Convert.ToString(WidthUpperBase);
             textBoxC1D1.Text = Convert.ToString(LongUpperBase);
             textBoxD1A1.Text = Convert.ToString(WidthUpperBase);
 
-            textBoxK1K.Text = Convert.ToString(obj.South);//блок вывода высоты трапеции
-            textBoxL1L.Text = Convert.ToString(obj.East);
-            textBoxM1M.Text = Convert.ToString(obj.North);
-            textBoxN1N.Text = Convert.ToString(obj.West);
+            textBoxK1K.Text = Convert.ToString(Math.Round(obj.South,4));//блок вывода высоты трапеции
+            textBoxL1L.Text = Convert.ToString(Math.Round(obj.East,4));
+            textBoxM1M.Text = Convert.ToString(Math.Round(obj.North,4));
+            textBoxN1N.Text = Convert.ToString(Math.Round(obj.West,4));
 
         }
 
