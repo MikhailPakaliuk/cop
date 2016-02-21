@@ -37,25 +37,25 @@ namespace WindowsFormsApplication1
 
         private void MakeTextBox(Model obj)// Convert.ToString выводим на фарму 
         {
-            textBoxAB.Text =Convert.ToString(LongBottomBase);//блок вывода нижнего основания 
+            textBoxAB.Text = Convert.ToString(LongBottomBase);//блок вывода нижнего основания 
             textBoxBC.Text = Convert.ToString(WidthBottomBase);
             textBoxCD.Text = Convert.ToString(LongBottomBase);
             textBoxDA.Text = Convert.ToString(WidthBottomBase);
-            
-            textBoxA1A.Text = Convert.ToString(obj.SouthWest);//блок вывода левого! ребра
-            textBoxB1B.Text = Convert.ToString(obj.SouthEast);
-            textBoxC1C.Text = Convert.ToString(obj.NorthEast);
-            textBoxD1D.Text = Convert.ToString(obj.NorthWest);
-            
+
+            textBoxA1A.Text = Convert.ToString(Math.Round(obj.SouthWest,4));//блок вывода левого! ребра
+            textBoxB1B.Text = Convert.ToString(Math.Round(obj.SouthEast,4));
+            textBoxC1C.Text = Convert.ToString(Math.Round(obj.NorthEast,4));
+            textBoxD1D.Text = Convert.ToString(Math.Round(obj.NorthWest,4));
+
             textBoxA1B1.Text = Convert.ToString(LongUpperBase);// блок  вывода верхнего основания
             textBoxB1C1.Text = Convert.ToString(WidthUpperBase);
             textBoxC1D1.Text = Convert.ToString(LongUpperBase);
             textBoxD1A1.Text = Convert.ToString(WidthUpperBase);
 
-            textBoxK1K.Text = Convert.ToString(obj.South);//блок вывода высоты трапеции
-            textBoxL1L.Text = Convert.ToString(obj.East);
-            textBoxM1M.Text = Convert.ToString(obj.North);
-            textBoxN1N.Text = Convert.ToString(obj.West);
+            textBoxK1K.Text = Convert.ToString(Math.Round(obj.South,4));//блок вывода высоты трапеции
+            textBoxL1L.Text = Convert.ToString(Math.Round(obj.East,4));
+            textBoxM1M.Text = Convert.ToString(Math.Round(obj.North,4));
+            textBoxN1N.Text = Convert.ToString(Math.Round(obj.West,4));
 
         }
 
@@ -73,43 +73,34 @@ namespace WindowsFormsApplication1
             DrawRectangle();
 
         }
-        private void DrawRectangle()
+
+        private void DrawRectangle()//рисуем на форме пирамиду, вид сверху
         {
-            int halfPoint11=12;
-            int halfPoint12=12;
-            int halfPoint21=390;
-            int halfPoint22=251;
-
-            int halfPoint31=150;
-            int halfPoint32=90;
-            int halfPoint41=100;
-            int halfPoint42 =50;
-
+            int halfPoint11 = 12;
+            int halfPoint12 = 12;
+            int halfPoint21 = 390;
+            int halfPoint22 = Convert.ToInt16(Math.Truncate(halfPoint21 * WidthBottomBase / LongBottomBase));
+            //посволяет рисовать пропорционально входным данным
+            int halfPoint31 = Convert.ToInt16(Math.Truncate(halfPoint21 * OffsetLong / LongBottomBase));
+            int halfPoint32 = Convert.ToInt16(Math.Truncate(halfPoint22 * OffsetWidth / WidthBottomBase));
+            int halfPoint41 = Convert.ToInt16(Math.Truncate(halfPoint21 * LongUpperBase / LongBottomBase));
+            int halfPoint42 = Convert.ToInt16(Math.Truncate(halfPoint22 * WidthUpperBase / WidthBottomBase));
 
             System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
 
             formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint11, halfPoint12, halfPoint21, halfPoint22));//прямоугольник
-            formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint31, halfPoint32, halfPoint41, halfPoint42));//
-            formGraphics.DrawLine(myPen, halfPoint11, halfPoint12, halfPoint31, halfPoint32); //линия
-            //formGraphics.DrawLine(myPen, halfPoint41, halfPoint32, halfPoint12, halfPoint21); //линия
-            //formGraphics.DrawLine(myPen, 12, 12, 60, 60); //линия
-            //formGraphics.DrawLine(myPen, halfPoint21, halfPoint22, halfPoint41, halfPoint42); //линия
+            formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint31, halfPoint32, halfPoint41, halfPoint42));
 
-            //Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };//треугольник
-            //formGraphics.DrawPolygon(myPen, myPointArray);
-
+            formGraphics.DrawLine(myPen, halfPoint11, halfPoint12, halfPoint31, halfPoint32); //линия nw
+            formGraphics.DrawLine(myPen, halfPoint21 + halfPoint11, halfPoint12, halfPoint31 + halfPoint41, halfPoint32);//ne
+            formGraphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42, halfPoint11, halfPoint22 + halfPoint12);//sw
+            formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42, halfPoint21 + halfPoint11, halfPoint22 + halfPoint12);//se
             myPen.Dispose();
             formGraphics.Dispose();
+            //Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };//треугольник
+            //formGraphics.DrawPolygon(myPen, myPointArray);
         }
-        //private void prLine()
-        //{
-        //    Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
-        //    e.Graphics.DrawLine(pen, 20, 10, 300, 100);
-
-        //    Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };
-        //    myGraphics.DrawPolygon(myPen, myPointArray);
-        //}
     }
 }
