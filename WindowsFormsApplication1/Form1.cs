@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
             HeightPiramide = Convert.ToDouble(textBoxHeight.Text);
         }
 
-        private void MakeTextBox(Model obj)// Convert.ToString выводим на фарму 
+        private void MakeTextBox(Model obj)// Convert.ToString выводим на форму 
         {
             textBoxAB.Text = Convert.ToString(LongBottomBase);//блок вывода нижнего основания 
             textBoxBC.Text = Convert.ToString(WidthBottomBase);
@@ -51,6 +51,11 @@ namespace WindowsFormsApplication1
             textBoxB1C1.Text = Convert.ToString(WidthUpperBase);
             textBoxC1D1.Text = Convert.ToString(LongUpperBase);
             textBoxD1A1.Text = Convert.ToString(WidthUpperBase);
+
+            textBoxB1Ba.Text = textBoxB1B.Text;//блок вывода правого! ребра
+            textBoxC1Cb.Text = textBoxC1C.Text;
+            textBoxD1Dc.Text = textBoxD1D.Text;
+            textBoxA1Ad.Text = textBoxA1A.Text;
 
             textBoxK1K.Text = Convert.ToString(Math.Round(obj.South,4));//блок вывода высоты трапеции
             textBoxL1L.Text = Convert.ToString(Math.Round(obj.East,4));
