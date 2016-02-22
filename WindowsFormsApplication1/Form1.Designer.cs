@@ -87,16 +87,17 @@
             this.labelA1A = new System.Windows.Forms.Label();
             this.textBoxAB = new System.Windows.Forms.TextBox();
             this.labelAB = new System.Windows.Forms.Label();
-            this.pictureBoxPiramide = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.pictureBoxPiramide = new System.Windows.Forms.PictureBox();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -242,9 +243,9 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(788, 271);
+            this.buttonStart.Location = new System.Drawing.Point(726, 271);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(75, 23);
+            this.buttonStart.Size = new System.Drawing.Size(83, 32);
             this.buttonStart.TabIndex = 0;
             this.buttonStart.Text = "Старт";
             this.buttonStart.UseVisualStyleBackColor = true;
@@ -252,9 +253,9 @@
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(869, 271);
+            this.buttonStop.Location = new System.Drawing.Point(831, 271);
             this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(75, 23);
+            this.buttonStop.Size = new System.Drawing.Size(83, 32);
             this.buttonStop.TabIndex = 1;
             this.buttonStop.Text = "Стоп";
             this.buttonStop.UseVisualStyleBackColor = true;
@@ -628,16 +629,6 @@
             this.labelAB.TabIndex = 0;
             this.labelAB.Text = "AB = ";
             // 
-            // pictureBoxPiramide
-            // 
-            this.pictureBoxPiramide.Image = global::WindowsFormsApplication1.Properties.Resources.pyramid19;
-            this.pictureBoxPiramide.Location = new System.Drawing.Point(6, 30);
-            this.pictureBoxPiramide.Name = "pictureBoxPiramide";
-            this.pictureBoxPiramide.Size = new System.Drawing.Size(409, 235);
-            this.pictureBoxPiramide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPiramide.TabIndex = 18;
-            this.pictureBoxPiramide.TabStop = false;
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -675,11 +666,32 @@
             this.tabControl1.Size = new System.Drawing.Size(531, 253);
             this.tabControl1.TabIndex = 17;
             // 
+            // pictureBoxPiramide
+            // 
+            this.pictureBoxPiramide.Image = global::WindowsFormsApplication1.Properties.Resources.pyramid19;
+            this.pictureBoxPiramide.Location = new System.Drawing.Point(4, 30);
+            this.pictureBoxPiramide.Name = "pictureBoxPiramide";
+            this.pictureBoxPiramide.Size = new System.Drawing.Size(409, 235);
+            this.pictureBoxPiramide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPiramide.TabIndex = 18;
+            this.pictureBoxPiramide.TabStop = false;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(148, 12);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(129, 13);
+            this.labelTitle.TabIndex = 19;
+            this.labelTitle.Text = "Вид пирамиды с ввехху ";
+            this.labelTitle.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 312);
+            this.ClientSize = new System.Drawing.Size(960, 323);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxPiramide);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonStop);
@@ -692,11 +704,12 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -760,10 +773,11 @@
         private System.Windows.Forms.Label labelA1A;
         private System.Windows.Forms.TextBox textBoxAB;
         private System.Windows.Forms.Label labelAB;
-        private System.Windows.Forms.PictureBox pictureBoxPiramide;
         public System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.PictureBox pictureBoxPiramide;
+        private System.Windows.Forms.Label labelTitle;
 
     }
 }
