@@ -90,6 +90,7 @@
             this.textBoxAB = new System.Windows.Forms.TextBox();
             this.labelAB = new System.Windows.Forms.Label();
             this.pictureBoxPiramide = new System.Windows.Forms.PictureBox();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -675,11 +676,22 @@
             this.pictureBoxPiramide.TabIndex = 18;
             this.pictureBoxPiramide.TabStop = false;
             // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(152, 14);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(121, 13);
+            this.labelTitle.TabIndex = 19;
+            this.labelTitle.Text = "Вид пирамиды с верху";
+            this.labelTitle.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 429);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxPiramide);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
@@ -693,6 +705,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -760,6 +773,7 @@
         private System.Windows.Forms.Label labelAB;
         private System.Windows.Forms.PictureBox pictureBoxPiramide;
         public System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label labelTitle;
 
     }
 }
