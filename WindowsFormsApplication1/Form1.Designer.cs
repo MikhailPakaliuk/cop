@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.labelHeight = new System.Windows.Forms.Label();
@@ -45,9 +44,8 @@
             this.textBoxLongUpperBase = new System.Windows.Forms.TextBox();
             this.textBoxWidthBottomBase = new System.Windows.Forms.TextBox();
             this.textBoxLongBottomBase = new System.Windows.Forms.TextBox();
-            this.buttonStop = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonStop = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxN1N = new System.Windows.Forms.TextBox();
             this.labelN1N = new System.Windows.Forms.Label();
@@ -90,36 +88,22 @@
             this.textBoxAB = new System.Windows.Forms.TextBox();
             this.labelAB = new System.Windows.Forms.Label();
             this.pictureBoxPiramide = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
             this.labelTitle = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+=======
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+>>>>>>> developer
             this.groupBox1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(417, 12);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(531, 253);
-            this.tabControl1.TabIndex = 17;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(523, 227);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Входные данные";
             // 
             // groupBox1
             // 
@@ -137,18 +121,15 @@
             this.groupBox1.Controls.Add(this.textBoxLongUpperBase);
             this.groupBox1.Controls.Add(this.textBoxWidthBottomBase);
             this.groupBox1.Controls.Add(this.textBoxLongBottomBase);
-            this.groupBox1.Controls.Add(this.buttonStop);
-            this.groupBox1.Controls.Add(this.buttonStart);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(511, 215);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Входные данные";
             // 
             // textBoxHeight
             // 
-            this.textBoxHeight.Location = new System.Drawing.Point(178, 167);
+            this.textBoxHeight.Location = new System.Drawing.Point(178, 162);
             this.textBoxHeight.Name = "textBoxHeight";
             this.textBoxHeight.Size = new System.Drawing.Size(45, 20);
             this.textBoxHeight.TabIndex = 15;
@@ -157,7 +138,7 @@
             // labelHeight
             // 
             this.labelHeight.AutoSize = true;
-            this.labelHeight.Location = new System.Drawing.Point(115, 170);
+            this.labelHeight.Location = new System.Drawing.Point(115, 165);
             this.labelHeight.Name = "labelHeight";
             this.labelHeight.Size = new System.Drawing.Size(45, 13);
             this.labelHeight.TabIndex = 14;
@@ -166,7 +147,7 @@
             // labelOffsetWidth
             // 
             this.labelOffsetWidth.AutoSize = true;
-            this.labelOffsetWidth.Location = new System.Drawing.Point(293, 123);
+            this.labelOffsetWidth.Location = new System.Drawing.Point(317, 118);
             this.labelOffsetWidth.Name = "labelOffsetWidth";
             this.labelOffsetWidth.Size = new System.Drawing.Size(117, 13);
             this.labelOffsetWidth.TabIndex = 13;
@@ -175,7 +156,7 @@
             // labelOffsetLong
             // 
             this.labelOffsetLong.AutoSize = true;
-            this.labelOffsetLong.Location = new System.Drawing.Point(45, 123);
+            this.labelOffsetLong.Location = new System.Drawing.Point(45, 118);
             this.labelOffsetLong.Name = "labelOffsetLong";
             this.labelOffsetLong.Size = new System.Drawing.Size(115, 13);
             this.labelOffsetLong.TabIndex = 12;
@@ -184,7 +165,7 @@
             // labelWidhtUpperBase
             // 
             this.labelWidhtUpperBase.AutoSize = true;
-            this.labelWidhtUpperBase.Location = new System.Drawing.Point(242, 77);
+            this.labelWidhtUpperBase.Location = new System.Drawing.Point(266, 72);
             this.labelWidhtUpperBase.Name = "labelWidhtUpperBase";
             this.labelWidhtUpperBase.Size = new System.Drawing.Size(173, 13);
             this.labelWidhtUpperBase.TabIndex = 11;
@@ -193,7 +174,7 @@
             // labelLongUpperBase
             // 
             this.labelLongUpperBase.AutoSize = true;
-            this.labelLongUpperBase.Location = new System.Drawing.Point(5, 77);
+            this.labelLongUpperBase.Location = new System.Drawing.Point(5, 72);
             this.labelLongUpperBase.Name = "labelLongUpperBase";
             this.labelLongUpperBase.Size = new System.Drawing.Size(173, 13);
             this.labelLongUpperBase.TabIndex = 10;
@@ -202,7 +183,7 @@
             // labelWidhtBottomBase
             // 
             this.labelWidhtBottomBase.AutoSize = true;
-            this.labelWidhtBottomBase.Location = new System.Drawing.Point(240, 34);
+            this.labelWidhtBottomBase.Location = new System.Drawing.Point(264, 29);
             this.labelWidhtBottomBase.Name = "labelWidhtBottomBase";
             this.labelWidhtBottomBase.Size = new System.Drawing.Size(158, 13);
             this.labelWidhtBottomBase.TabIndex = 9;
@@ -211,7 +192,7 @@
             // labelLongBottomBase
             // 
             this.labelLongBottomBase.AutoSize = true;
-            this.labelLongBottomBase.Location = new System.Drawing.Point(8, 34);
+            this.labelLongBottomBase.Location = new System.Drawing.Point(8, 29);
             this.labelLongBottomBase.Name = "labelLongBottomBase";
             this.labelLongBottomBase.Size = new System.Drawing.Size(158, 13);
             this.labelLongBottomBase.TabIndex = 8;
@@ -219,7 +200,7 @@
             // 
             // textBoxOffsetWidth
             // 
-            this.textBoxOffsetWidth.Location = new System.Drawing.Point(418, 120);
+            this.textBoxOffsetWidth.Location = new System.Drawing.Point(442, 115);
             this.textBoxOffsetWidth.Name = "textBoxOffsetWidth";
             this.textBoxOffsetWidth.Size = new System.Drawing.Size(45, 20);
             this.textBoxOffsetWidth.TabIndex = 7;
@@ -227,7 +208,7 @@
             // 
             // textBoxOffsetLong
             // 
-            this.textBoxOffsetLong.Location = new System.Drawing.Point(178, 120);
+            this.textBoxOffsetLong.Location = new System.Drawing.Point(178, 115);
             this.textBoxOffsetLong.Name = "textBoxOffsetLong";
             this.textBoxOffsetLong.Size = new System.Drawing.Size(45, 20);
             this.textBoxOffsetLong.TabIndex = 6;
@@ -235,7 +216,7 @@
             // 
             // textBoxWidthUpperBase
             // 
-            this.textBoxWidthUpperBase.Location = new System.Drawing.Point(418, 74);
+            this.textBoxWidthUpperBase.Location = new System.Drawing.Point(442, 69);
             this.textBoxWidthUpperBase.Name = "textBoxWidthUpperBase";
             this.textBoxWidthUpperBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxWidthUpperBase.TabIndex = 5;
@@ -243,7 +224,7 @@
             // 
             // textBoxLongUpperBase
             // 
-            this.textBoxLongUpperBase.Location = new System.Drawing.Point(178, 74);
+            this.textBoxLongUpperBase.Location = new System.Drawing.Point(178, 69);
             this.textBoxLongUpperBase.Name = "textBoxLongUpperBase";
             this.textBoxLongUpperBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxLongUpperBase.TabIndex = 4;
@@ -251,7 +232,7 @@
             // 
             // textBoxWidthBottomBase
             // 
-            this.textBoxWidthBottomBase.Location = new System.Drawing.Point(418, 31);
+            this.textBoxWidthBottomBase.Location = new System.Drawing.Point(442, 26);
             this.textBoxWidthBottomBase.Name = "textBoxWidthBottomBase";
             this.textBoxWidthBottomBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxWidthBottomBase.TabIndex = 3;
@@ -259,24 +240,15 @@
             // 
             // textBoxLongBottomBase
             // 
-            this.textBoxLongBottomBase.Location = new System.Drawing.Point(178, 31);
+            this.textBoxLongBottomBase.Location = new System.Drawing.Point(178, 26);
             this.textBoxLongBottomBase.Name = "textBoxLongBottomBase";
             this.textBoxLongBottomBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxLongBottomBase.TabIndex = 2;
             this.textBoxLongBottomBase.Text = "12";
             // 
-            // buttonStop
-            // 
-            this.buttonStop.Location = new System.Drawing.Point(408, 167);
-            this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(75, 23);
-            this.buttonStop.TabIndex = 1;
-            this.buttonStop.Text = "Стоп";
-            this.buttonStop.UseVisualStyleBackColor = true;
-            // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(296, 167);
+            this.buttonStart.Location = new System.Drawing.Point(788, 271);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(75, 23);
             this.buttonStart.TabIndex = 0;
@@ -284,18 +256,15 @@
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
-            // tabPage2
+            // buttonStop
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(523, 227);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Выходные данные";
-            this.tabPage2.Enter += new System.EventHandler(this.buttonStart_Click);
+            this.buttonStop.Location = new System.Drawing.Point(869, 271);
+            this.buttonStop.Name = "buttonStop";
+            this.buttonStop.Size = new System.Drawing.Size(75, 23);
+            this.buttonStop.TabIndex = 1;
+            this.buttonStop.Text = "Стоп";
+            this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // groupBox2
             // 
@@ -344,7 +313,6 @@
             this.groupBox2.Size = new System.Drawing.Size(511, 215);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Выходные данные";
             // 
             // textBoxN1N
             // 
@@ -676,6 +644,7 @@
             this.pictureBoxPiramide.TabIndex = 18;
             this.pictureBoxPiramide.TabStop = false;
             // 
+<<<<<<< HEAD
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
@@ -685,25 +654,71 @@
             this.labelTitle.TabIndex = 19;
             this.labelTitle.Text = "Вид пирамиды с верху";
             this.labelTitle.Visible = false;
+=======
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(523, 227);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Выходные данные";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.tabPage2.Enter += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(523, 227);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Входные данные";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(417, 12);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(531, 253);
+            this.tabControl1.TabIndex = 17;
+>>>>>>> developer
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(960, 429);
             this.Controls.Add(this.labelTitle);
+=======
+            this.ClientSize = new System.Drawing.Size(960, 312);
+>>>>>>> developer
             this.Controls.Add(this.pictureBoxPiramide);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.buttonStop);
+            this.Controls.Add(this.buttonStart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.Text = "Calculation Pyramid";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiramide)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -711,8 +726,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxHeight;
         private System.Windows.Forms.Label labelHeight;
@@ -773,7 +786,12 @@
         private System.Windows.Forms.Label labelAB;
         private System.Windows.Forms.PictureBox pictureBoxPiramide;
         public System.Windows.Forms.TabPage tabPage2;
+<<<<<<< HEAD
         private System.Windows.Forms.Label labelTitle;
+=======
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tabControl1;
+>>>>>>> developer
 
     }
 }

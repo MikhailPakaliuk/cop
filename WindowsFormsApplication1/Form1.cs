@@ -70,12 +70,18 @@ namespace WindowsFormsApplication1
             return obj;
         }
 
+       // public void SelectTab(TabPage tabPage){}
+
         private void buttonStart_Click(object sender, EventArgs e)
         {
             ReadTextBox();
             MakeTextBox(GetValues());
             pictureBoxPiramide.Visible = false;
+<<<<<<< HEAD
             labelTitle.Visible = true;
+=======
+            tabControl1.SelectTab(tabPage2);
+>>>>>>> developer
             DrawRectangle();
         }
 
@@ -111,5 +117,21 @@ namespace WindowsFormsApplication1
             //Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };//треугольник
             //formGraphics.DrawPolygon(myPen, myPointArray);
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(tabPage1);
+        }
+
     }
 }
