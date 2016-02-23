@@ -102,6 +102,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.textBoxHeight);
             this.groupBox1.Controls.Add(this.labelHeight);
             this.groupBox1.Controls.Add(this.labelOffsetWidth);
@@ -631,7 +632,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -645,7 +646,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -690,6 +691,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(960, 323);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBoxPiramide);

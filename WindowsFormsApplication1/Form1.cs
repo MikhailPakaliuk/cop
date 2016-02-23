@@ -23,6 +23,7 @@ namespace WindowsFormsApplication1
         public double OffsetLong;
         public double OffsetWidth;
         public double HeightPiramide;
+        Graphics formGraphics;
 
         private void ReadTextBox()//считываем с формы и Convert.ToDouble
         {
@@ -70,8 +71,6 @@ namespace WindowsFormsApplication1
             return obj;
         }
 
-       // public void SelectTab(TabPage tabPage){}
-
         private void buttonStart_Click(object sender, EventArgs e)
         {
             ReadTextBox();
@@ -82,7 +81,6 @@ namespace WindowsFormsApplication1
             DrawRectangle();
 
         }
-
         private void DrawRectangle()//рисуем на форме пирамиду, вид сверху
         {
             int halfPoint11 = 12;
@@ -94,9 +92,8 @@ namespace WindowsFormsApplication1
             int halfPoint41 = Convert.ToInt16(Math.Truncate(halfPoint21 * LongUpperBase / LongBottomBase));
             int halfPoint42 = Convert.ToInt16(Math.Truncate(halfPoint22 * WidthUpperBase / WidthBottomBase));
 
-            System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
-            System.Drawing.Graphics formGraphics;
-            formGraphics = this.CreateGraphics();
+            Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            formGraphics = CreateGraphics();
             //рисуем два прямоугольника прямоугольник
             formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint11, halfPoint12, halfPoint21, halfPoint22));
             formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint31, halfPoint32, halfPoint41, halfPoint42));
@@ -110,8 +107,10 @@ namespace WindowsFormsApplication1
             formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41 / 2, halfPoint32 + halfPoint42, halfPoint31 + halfPoint41 / 2, halfPoint12 + halfPoint22);//s
             formGraphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42 / 2, halfPoint11, halfPoint32 + halfPoint42 / 2);//w
             formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42 / 2, halfPoint11 + halfPoint21, halfPoint32 + halfPoint42 / 2);//e
-            myPen.Dispose();
-            formGraphics.Dispose();
+            //formGraphics.Clear(Color.White);
+            //myPen.Dispose();
+            //formGraphics.Dispose();
+
             //Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };//треугольник
             //formGraphics.DrawPolygon(myPen, myPointArray);
         }
@@ -131,6 +130,7 @@ namespace WindowsFormsApplication1
             tabControl1.SelectTab(tabPage1);
             labelTitle.Visible = false;
             pictureBoxPiramide.Visible = true;
+            formGraphics.Clear(Color.White);
         }
 
     }
