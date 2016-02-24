@@ -23,6 +23,7 @@ namespace WindowsFormsApplication1
         public double OffsetLong;
         public double OffsetWidth;
         public double HeightPiramide;
+        Graphics formGraphics;
 
         private void ReadTextBox()//считываем с формы и Convert.ToDouble
         {
@@ -70,25 +71,35 @@ namespace WindowsFormsApplication1
             return obj;
         }
 
-       // public void SelectTab(TabPage tabPage){}
-
         private void buttonStart_Click(object sender, EventArgs e)
         {
             ReadTextBox();
             MakeTextBox(GetValues());
             pictureBoxPiramide.Visible = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
             labelTitle.Visible = true;
 =======
+=======
+            labelTitle.Visible = true;
+>>>>>>> developer
             tabControl1.SelectTab(tabPage2);
 >>>>>>> developer
             DrawRectangle();
-        }
+<<<<<<< HEAD
+=======
+            DrawVerticalString();
 
+>>>>>>> developer
+        }
         private void DrawRectangle()//рисуем на форме пирамиду, вид сверху
         {
             int halfPoint11 = 12;
+<<<<<<< HEAD
             int halfPoint12 = 30;
+=======
+            int halfPoint12 = 25;
+>>>>>>> developer
             int halfPoint21 = 390;          //5 строк ниже позволяют рисовать пропорционально входным данным
             int halfPoint22 = Convert.ToInt16(Math.Truncate(halfPoint21 * WidthBottomBase / LongBottomBase));
             int halfPoint31 = Convert.ToInt16(Math.Truncate(halfPoint21 * OffsetLong / LongBottomBase)) + halfPoint11;
@@ -96,9 +107,14 @@ namespace WindowsFormsApplication1
             int halfPoint41 = Convert.ToInt16(Math.Truncate(halfPoint21 * LongUpperBase / LongBottomBase));
             int halfPoint42 = Convert.ToInt16(Math.Truncate(halfPoint22 * WidthUpperBase / WidthBottomBase));
 
+<<<<<<< HEAD
             System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
+=======
+            Pen myPen = new Pen(Color.Black);
+            formGraphics = CreateGraphics();
+>>>>>>> developer
             //рисуем два прямоугольника прямоугольник
             formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint11, halfPoint12, halfPoint21, halfPoint22));
             formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint31, halfPoint32, halfPoint41, halfPoint42));
@@ -112,10 +128,33 @@ namespace WindowsFormsApplication1
             formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41 / 2, halfPoint32 + halfPoint42, halfPoint31 + halfPoint41 / 2, halfPoint12 + halfPoint22);//s
             formGraphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42 / 2, halfPoint11, halfPoint32 + halfPoint42 / 2);//w
             formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42 / 2, halfPoint11 + halfPoint21, halfPoint32 + halfPoint42 / 2);//e
+<<<<<<< HEAD
             myPen.Dispose();
             formGraphics.Dispose();
+=======
+            //formGraphics.Clear(Color.White);
+            //myPen.Dispose();
+            //formGraphics.Dispose();
+
+>>>>>>> developer
             //Point[] myPointArray = { new Point(0, 0), new Point(50, 30), new Point(30, 60) };//треугольник
             //formGraphics.DrawPolygon(myPen, myPointArray);
+        }
+
+        public void DrawVerticalString()
+        {
+            Graphics fGraphics = CreateGraphics();
+            string drawString = "Sample Text";
+            Font drawFont = new System.Drawing.Font("Arial", 16);
+            SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
+            float x = 150.0F;
+            float y = 50.0F;
+            StringFormat drawFormat = new StringFormat();
+            //drawFormat.FormatFlags = StringFormatFlags.DirectionVertical;
+            fGraphics.DrawString(drawString, drawFont, drawBrush, x, y, drawFormat);
+            drawFont.Dispose();
+            drawBrush.Dispose();
+            fGraphics.Dispose();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -131,6 +170,10 @@ namespace WindowsFormsApplication1
         private void buttonStop_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(tabPage1);
+            labelTitle.Visible = false;
+            pictureBoxPiramide.Visible = true;
+            formGraphics.Clear(Color.White);
+            formGraphics.Dispose();
         }
 
     }
