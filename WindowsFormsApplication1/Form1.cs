@@ -79,6 +79,7 @@ namespace WindowsFormsApplication1
             labelTitle.Visible = true;
             tabControl1.SelectTab(tabPage2);
             DrawRectangle();
+            DrawVerticalString();
 
         }
         private void DrawRectangle()//рисуем на форме пирамиду, вид сверху
@@ -92,7 +93,7 @@ namespace WindowsFormsApplication1
             int halfPoint41 = Convert.ToInt16(Math.Truncate(halfPoint21 * LongUpperBase / LongBottomBase));
             int halfPoint42 = Convert.ToInt16(Math.Truncate(halfPoint22 * WidthUpperBase / WidthBottomBase));
 
-            Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            Pen myPen = new Pen(Color.Black);
             formGraphics = CreateGraphics();
             //рисуем два прямоугольника прямоугольник
             formGraphics.DrawRectangle(myPen, new Rectangle(halfPoint11, halfPoint12, halfPoint21, halfPoint22));
@@ -115,6 +116,22 @@ namespace WindowsFormsApplication1
             //formGraphics.DrawPolygon(myPen, myPointArray);
         }
 
+        public void DrawVerticalString()
+        {
+            Graphics fGraphics = CreateGraphics();
+            string drawString = "Sample Text";
+            Font drawFont = new System.Drawing.Font("Arial", 16);
+            SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
+            float x = 150.0F;
+            float y = 50.0F;
+            StringFormat drawFormat = new StringFormat();
+            //drawFormat.FormatFlags = StringFormatFlags.DirectionVertical;
+            fGraphics.DrawString(drawString, drawFont, drawBrush, x, y, drawFormat);
+            drawFont.Dispose();
+            drawBrush.Dispose();
+            fGraphics.Dispose();
+        }
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -131,6 +148,7 @@ namespace WindowsFormsApplication1
             labelTitle.Visible = false;
             pictureBoxPiramide.Visible = true;
             formGraphics.Clear(Color.White);
+            formGraphics.Dispose();
         }
 
     }
