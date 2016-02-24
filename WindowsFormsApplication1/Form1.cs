@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -120,8 +121,8 @@ namespace WindowsFormsApplication1
         {
             Graphics fGraphics = CreateGraphics();
             string drawString = "Sample Text";
-            Font drawFont = new System.Drawing.Font("Arial", 16);
-            SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
+            Font drawFont = new Font("Arial", 16);
+            SolidBrush drawBrush = new SolidBrush(Color.Black);
             float x = 150.0F;
             float y = 50.0F;
             StringFormat drawFormat = new StringFormat();
@@ -149,6 +150,45 @@ namespace WindowsFormsApplication1
             pictureBoxPiramide.Visible = true;
             formGraphics.Clear(Color.White);
             formGraphics.Dispose();
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs ev)
+        {
+            //Bitmap df = new Bitmap(900,600,formGraphics);
+            //Pen myPen = new Pen(Color.Black);
+            //ev.Graphics.DrawRectangle(myPen, new Rectangle(10,20,30,50));
+
+            int halfPoint11 = 12;
+            int halfPoint12 = 25;
+            int halfPoint21 = 390;          //5 строк ниже позволяют рисовать пропорционально входным данным
+            int halfPoint22 = Convert.ToInt16(Math.Truncate(halfPoint21 * WidthBottomBase / LongBottomBase));
+            int halfPoint31 = Convert.ToInt16(Math.Truncate(halfPoint21 * OffsetLong / LongBottomBase)) + halfPoint11;
+            int halfPoint32 = Convert.ToInt16(Math.Truncate(halfPoint22 * OffsetWidth / WidthBottomBase)) + halfPoint12;
+            int halfPoint41 = Convert.ToInt16(Math.Truncate(halfPoint21 * LongUpperBase / LongBottomBase));
+            int halfPoint42 = Convert.ToInt16(Math.Truncate(halfPoint22 * WidthUpperBase / WidthBottomBase));
+
+            Pen myPen = new Pen(Color.Black);
+           // formGraphics = CreateGraphics();
+            //рисуем два прямоугольника прямоугольник
+            ev.Graphics.DrawRectangle(myPen, new Rectangle(halfPoint11, halfPoint12, halfPoint21, halfPoint22));
+            ev.Graphics.DrawRectangle(myPen, new Rectangle(halfPoint31, halfPoint32, halfPoint41, halfPoint42));
+            //рисуем боковые рёбра пирамиды
+            ev.Graphics.DrawLine(myPen, halfPoint11, halfPoint12, halfPoint31, halfPoint32); //nw
+            ev.Graphics.DrawLine(myPen, halfPoint21 + halfPoint11, halfPoint12, halfPoint31 + halfPoint41, halfPoint32);//ne
+            ev.Graphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42, halfPoint11, halfPoint22 + halfPoint12);//sw
+            ev.Graphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42, halfPoint21 + halfPoint11, halfPoint22 + halfPoint12);//se
+            //рисуем высоты боковых граней пирамиды 
+            ev.Graphics.DrawLine(myPen, halfPoint31 + halfPoint41 / 2, halfPoint32, halfPoint31 + halfPoint41 / 2, halfPoint12);//n
+            ev.Graphics.DrawLine(myPen, halfPoint31 + halfPoint41 / 2, halfPoint32 + halfPoint42, halfPoint31 + halfPoint41 / 2, halfPoint12 + halfPoint22);//s
+            ev.Graphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42 / 2, halfPoint11, halfPoint32 + halfPoint42 / 2);//w
+            ev.Graphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42 / 2, halfPoint11 + halfPoint21, halfPoint32 + halfPoint42 / 2);//e
+            //formGraphics.Clear(Color.White); 
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            printDocument1.PrintPage+=new PrintPageEventHandler(printDocument1_PrintPage);
+            printPreviewDialog1.ShowDialog();
         }
 
     }
