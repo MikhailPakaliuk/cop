@@ -139,9 +139,18 @@ namespace WindowsFormsApplication1
             Font drawFont = new Font("Arial", 14);
             SolidBrush drawBrush = new SolidBrush(Color.Black);
             formGraphics.DrawString("A", drawFont, drawBrush, new Point(halfPoint11, halfPoint12));
-            formGraphics.DrawString("B", drawFont, drawBrush, new Point(halfPoint21, halfPoint12));
-            formGraphics.DrawString("C", drawFont, drawBrush, new Point(halfPoint21, halfPoint22));
+            formGraphics.DrawString("B", drawFont, drawBrush, new Point(halfPoint21-halfPoint11, halfPoint12));
+            formGraphics.DrawString("C", drawFont, drawBrush, new Point(halfPoint21 - halfPoint11, halfPoint22));
             formGraphics.DrawString("D", drawFont, drawBrush, new Point(halfPoint11, halfPoint22));
+
+<<<<<<< HEAD
+>>>>>>> developer
+=======
+            formGraphics.DrawString("A1", drawFont, drawBrush, new Point(halfPoint31, halfPoint32));
+            formGraphics.DrawString("B1", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41, halfPoint32));
+            formGraphics.DrawString("C1", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41, halfPoint32+ halfPoint42));
+            formGraphics.DrawString("D1", drawFont, drawBrush, new Point(halfPoint31, halfPoint32 + halfPoint42));
+
 
 >>>>>>> developer
             //formGraphics.Clear(Color.White);
@@ -222,9 +231,14 @@ namespace WindowsFormsApplication1
             Font drawFont = new Font("Arial", 14);
             SolidBrush drawBrush = new SolidBrush(Color.Black);
             ev.Graphics.DrawString("A", drawFont, drawBrush, new Point(halfPoint11, halfPoint12));
-            ev.Graphics.DrawString("B", drawFont, drawBrush, new Point(halfPoint21, halfPoint12));
-            ev.Graphics.DrawString("C", drawFont, drawBrush, new Point(halfPoint21, halfPoint22));
+            ev.Graphics.DrawString("B", drawFont, drawBrush, new Point(halfPoint21 - halfPoint11, halfPoint12));
+            ev.Graphics.DrawString("C", drawFont, drawBrush, new Point(halfPoint21 - halfPoint11, halfPoint22));
             ev.Graphics.DrawString("D", drawFont, drawBrush, new Point(halfPoint11, halfPoint22));
+
+            ev.Graphics.DrawString("A1", drawFont, drawBrush, new Point(halfPoint31, halfPoint32));
+            ev.Graphics.DrawString("B1", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41, halfPoint32));
+            ev.Graphics.DrawString("C1", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41, halfPoint32 + halfPoint42));
+            ev.Graphics.DrawString("D1", drawFont, drawBrush, new Point(halfPoint31, halfPoint32 + halfPoint42));
             //formGraphics.Clear(Color.White); 
         }
 
