@@ -105,6 +105,11 @@
             this.pictureBoxPiramide = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonPrint = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+>>>>>>> developer
+=======
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
 >>>>>>> developer
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -734,6 +739,18 @@
             this.buttonPrint.TabIndex = 20;
             this.buttonPrint.Text = "Печать";
             this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Form1
             // 
@@ -758,6 +775,8 @@
             this.Controls.Add(this.buttonStart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(976, 359);
+            this.MinimumSize = new System.Drawing.Size(976, 359);
             this.Name = "Form1";
             this.Text = "Calculation Pyramid";
             this.groupBox1.ResumeLayout(false);
@@ -845,6 +864,11 @@
         private System.Windows.Forms.PictureBox pictureBoxPiramide;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button buttonPrint;
+<<<<<<< HEAD
+>>>>>>> developer
+=======
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
 >>>>>>> developer
 
     }
