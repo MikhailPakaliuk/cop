@@ -109,6 +109,14 @@ namespace WindowsFormsApplication1
             formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41 / 2, halfPoint32 + halfPoint42, halfPoint31 + halfPoint41 / 2, halfPoint12 + halfPoint22);//s
             formGraphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42 / 2, halfPoint11, halfPoint32 + halfPoint42 / 2);//w
             formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42 / 2, halfPoint11 + halfPoint21, halfPoint32 + halfPoint42 / 2);//e
+           
+            Font drawFont = new Font("Arial", 14);
+            SolidBrush drawBrush = new SolidBrush(Color.Black);
+            formGraphics.DrawString("A", drawFont, drawBrush, new Point(halfPoint11, halfPoint12));
+            formGraphics.DrawString("B", drawFont, drawBrush, new Point(halfPoint21, halfPoint12));
+            formGraphics.DrawString("C", drawFont, drawBrush, new Point(halfPoint21, halfPoint22));
+            formGraphics.DrawString("D", drawFont, drawBrush, new Point(halfPoint11, halfPoint22));
+
             //formGraphics.Clear(Color.White);
             //myPen.Dispose();
             //formGraphics.Dispose();
@@ -160,7 +168,7 @@ namespace WindowsFormsApplication1
 
             int halfPoint11 = 12;
             int halfPoint12 = 25;
-            int halfPoint21 = 390;          //5 строк ниже позволяют рисовать пропорционально входным данным
+            int halfPoint21 = 800;          //5 строк ниже позволяют рисовать пропорционально входным данным
             int halfPoint22 = Convert.ToInt16(Math.Truncate(halfPoint21 * WidthBottomBase / LongBottomBase));
             int halfPoint31 = Convert.ToInt16(Math.Truncate(halfPoint21 * OffsetLong / LongBottomBase)) + halfPoint11;
             int halfPoint32 = Convert.ToInt16(Math.Truncate(halfPoint22 * OffsetWidth / WidthBottomBase)) + halfPoint12;
@@ -182,6 +190,13 @@ namespace WindowsFormsApplication1
             ev.Graphics.DrawLine(myPen, halfPoint31 + halfPoint41 / 2, halfPoint32 + halfPoint42, halfPoint31 + halfPoint41 / 2, halfPoint12 + halfPoint22);//s
             ev.Graphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42 / 2, halfPoint11, halfPoint32 + halfPoint42 / 2);//w
             ev.Graphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42 / 2, halfPoint11 + halfPoint21, halfPoint32 + halfPoint42 / 2);//e
+
+            Font drawFont = new Font("Arial", 14);
+            SolidBrush drawBrush = new SolidBrush(Color.Black);
+            ev.Graphics.DrawString("A", drawFont, drawBrush, new Point(halfPoint11, halfPoint12));
+            ev.Graphics.DrawString("B", drawFont, drawBrush, new Point(halfPoint21, halfPoint12));
+            ev.Graphics.DrawString("C", drawFont, drawBrush, new Point(halfPoint21, halfPoint22));
+            ev.Graphics.DrawString("D", drawFont, drawBrush, new Point(halfPoint11, halfPoint22));
             //formGraphics.Clear(Color.White); 
         }
 
