@@ -17,15 +17,15 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        public double LongBottomBase;
-        public double WidthBottomBase;
-        public double LongUpperBase;
-        public double WidthUpperBase;
-        public double OffsetLong;
-        public double OffsetWidth;
-        public double HeightPiramide;
+        public double LongBottomBase;//Длинна нижн. основания (АВ)
+        public double WidthBottomBase;//Ширина нижн. основания (BC)
+        public double LongUpperBase;//Длинна верхн. основания (А1В1)
+        public double WidthUpperBase;//Ширина верхн. основания (B1C1)
+        public double OffsetLong;//Смещение по длинне
+        public double OffsetWidth;//Смещение по ширине
+        public double HeightPiramide;//Высота пиромыды от основания до основания
         Graphics formGraphics;
-
+        
         private void ReadTextBox()//считываем с формы и Convert.ToDouble
         {
             LongBottomBase = Convert.ToDouble(textBoxLongBottomBase.Text);
@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1
             return obj;
         }
 
-        private void buttonStart_Click(object sender, EventArgs e)
+        private void buttonStart_Click(object sender, EventArgs e)//по нажатию кнопки "Старт" выполняеть следующее
         {
             ReadTextBox();
             MakeTextBox(GetValues());
@@ -81,7 +81,6 @@ namespace WindowsFormsApplication1
             tabControl1.SelectTab(tabPage2);
             DrawRectangle();
             //DrawVerticalString();
-
         }
 
         private void DrawRectangle()//рисуем на форме пирамиду, вид сверху
@@ -141,7 +140,7 @@ namespace WindowsFormsApplication1
             //formGraphics.DrawPolygon(myPen, myPointArray);
         }
 
-        public void DrawVerticalString()
+        public void DrawVerticalString()//test вывод теуста на черёж
         {
             Graphics fGraphics = CreateGraphics();
             string drawString = "Sample Text";
@@ -167,7 +166,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void buttonStop_Click(object sender, EventArgs e)
+        private void buttonStop_Click(object sender, EventArgs e)//по нажатию кнопки "Стоп" выполняеть следующее
         {
             tabControl1.SelectTab(tabPage1);
             labelTitle.Visible = false;
@@ -176,7 +175,7 @@ namespace WindowsFormsApplication1
             formGraphics.Dispose();
         }
 
-        private void printDocument1_PrintPage(object sender, PrintPageEventArgs ev)
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs ev)//подготовка чертежа на печать
         {
             //Bitmap df = new Bitmap(900,600,formGraphics);
             //Pen myPen = new Pen(Color.Black);
@@ -231,7 +230,7 @@ namespace WindowsFormsApplication1
             //formGraphics.Clear(Color.White); 
         }
 
-        private void buttonPrint_Click(object sender, EventArgs e)
+        private void buttonPrint_Click(object sender, EventArgs e)//по нажатию кнопки "Печать" выполняеть следующее
         {
             printDocument1.PrintPage+=new PrintPageEventHandler(printDocument1_PrintPage);
             printPreviewDialog1.ShowDialog();
