@@ -109,14 +109,15 @@ namespace WindowsFormsApplication1
             formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41 / 2, halfPoint32 + halfPoint42, halfPoint31 + halfPoint41 / 2, halfPoint12 + halfPoint22);//s
             formGraphics.DrawLine(myPen, halfPoint31, halfPoint32 + halfPoint42 / 2, halfPoint11, halfPoint32 + halfPoint42 / 2);//w
             formGraphics.DrawLine(myPen, halfPoint31 + halfPoint41, halfPoint32 + halfPoint42 / 2, halfPoint11 + halfPoint21, halfPoint32 + halfPoint42 / 2);//e
-           
+
             Font drawFont = new Font("Arial", 12);
             SolidBrush drawBrush = new SolidBrush(Color.Black);
+
             //рисуем название точек пересечения рёбер пирамиды 
             formGraphics.DrawString("A", drawFont, drawBrush, new Point(halfPoint11, halfPoint12));
-            formGraphics.DrawString("B", drawFont, drawBrush, new Point(halfPoint21-halfPoint11, halfPoint12));
-            formGraphics.DrawString("C", drawFont, drawBrush, new Point(halfPoint21 - halfPoint11, halfPoint22));
-            formGraphics.DrawString("D", drawFont, drawBrush, new Point(halfPoint11, halfPoint22));
+            formGraphics.DrawString("B", drawFont, drawBrush, new Point(halfPoint21-halfPoint11+5, halfPoint12));
+            formGraphics.DrawString("C", drawFont, drawBrush, new Point(halfPoint21 - halfPoint11+5, halfPoint22+7));
+            formGraphics.DrawString("D", drawFont, drawBrush, new Point(halfPoint11, halfPoint22 + 7));
 
             formGraphics.DrawString("A1", drawFont, drawBrush, new Point(halfPoint31, halfPoint32));
             formGraphics.DrawString("B1", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41, halfPoint32));
@@ -125,13 +126,24 @@ namespace WindowsFormsApplication1
 
             formGraphics.DrawString("K", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41 / 2, halfPoint12));
             formGraphics.DrawString("L", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41, halfPoint32 + halfPoint42/2));
-            formGraphics.DrawString("M", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41 / 2,halfPoint22));
+            formGraphics.DrawString("M", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41 / 2,halfPoint22+7));
             formGraphics.DrawString("N", drawFont, drawBrush, new Point(halfPoint11, halfPoint32 + halfPoint42 / 2));
 
             formGraphics.DrawString("K1", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41 / 2, halfPoint32));
             formGraphics.DrawString("L1", drawFont, drawBrush, new Point(halfPoint21 - halfPoint11, halfPoint32 + halfPoint42 / 2));
             formGraphics.DrawString("M1", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41 / 2, halfPoint32 + halfPoint42));
             formGraphics.DrawString("N1", drawFont, drawBrush, new Point(halfPoint31, halfPoint32 + halfPoint42 / 2));
+
+            //вывод дилины ребёр на форму
+            formGraphics.DrawString("aa1", drawFont, drawBrush, new Point((halfPoint11 + halfPoint31) / 2, (halfPoint12 + halfPoint32) / 2));//aa1
+            formGraphics.DrawString("bb1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 + halfPoint21 + halfPoint11) / 2, (halfPoint32 + halfPoint12) / 2));//bb1
+            formGraphics.DrawString("cc1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 + halfPoint21 + halfPoint11) / 2, (halfPoint32 + halfPoint42 + halfPoint22 + halfPoint12) / 2));//cc1
+            formGraphics.DrawString("dd1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint11) / 2, (halfPoint32 + halfPoint42 + halfPoint22 + halfPoint12) / 2));//dd1
+
+            formGraphics.DrawString("kk1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 / 2), (halfPoint32 + halfPoint12) / 2));//kk1
+            formGraphics.DrawString("mm1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 / 2), (halfPoint32 + halfPoint42 + halfPoint12 + halfPoint22) / 2));//mm1
+            formGraphics.DrawString("nn1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint11) / 2, (halfPoint32 + halfPoint42 / 2)));//nn1
+            formGraphics.DrawString("ll1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 + halfPoint11 + halfPoint21)/2, halfPoint32 + halfPoint42 / 2));//ll1
             //formGraphics.Clear(Color.White);
             //myPen.Dispose();
             //formGraphics.Dispose();
@@ -140,7 +152,7 @@ namespace WindowsFormsApplication1
             //formGraphics.DrawPolygon(myPen, myPointArray);
         }
 
-        public void DrawVerticalString()//test вывод теуста на черёж
+        public void DrawVerticalString()//test вывод текста на черёж
         {
             Graphics fGraphics = CreateGraphics();
             string drawString = "Sample Text";
@@ -227,6 +239,18 @@ namespace WindowsFormsApplication1
             ev.Graphics.DrawString("L1", drawFont, drawBrush, new Point(halfPoint21 - halfPoint11, halfPoint32 + halfPoint42 / 2));
             ev.Graphics.DrawString("M1", drawFont, drawBrush, new Point(halfPoint31 + halfPoint41 / 2, halfPoint32 + halfPoint42));
             ev.Graphics.DrawString("N1", drawFont, drawBrush, new Point(halfPoint31, halfPoint32 + halfPoint42 / 2));
+
+            //вывод дилины ребёр на форму
+            ev.Graphics.DrawString("aa1", drawFont, drawBrush, new Point((halfPoint11 + halfPoint31) / 2, (halfPoint12 + halfPoint32) / 2));//aa1
+            ev.Graphics.DrawString("bb1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 + halfPoint21 + halfPoint11) / 2, (halfPoint32 + halfPoint12) / 2));//bb1
+            ev.Graphics.DrawString("cc1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 + halfPoint21 + halfPoint11) / 2, (halfPoint32 + halfPoint42 + halfPoint22 + halfPoint12) / 2));//cc1
+            ev.Graphics.DrawString("dd1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint11) / 2, (halfPoint32 + halfPoint42 + halfPoint22 + halfPoint12) / 2));//dd1
+
+            ev.Graphics.DrawString("kk1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 / 2), (halfPoint32 + halfPoint12) / 2));//kk1
+            ev.Graphics.DrawString("mm1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 / 2), (halfPoint32 + halfPoint42 + halfPoint12 + halfPoint22) / 2));//mm1
+            ev.Graphics.DrawString("nn1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint11) / 2, (halfPoint32 + halfPoint42 / 2)));//nn1
+            ev.Graphics.DrawString("ll1", drawFont, drawBrush, new Point((halfPoint31 + halfPoint41 + halfPoint11 + halfPoint21) / 2, halfPoint32 + halfPoint42 / 2));//ll1
+            
             //formGraphics.Clear(Color.White); 
         }
 

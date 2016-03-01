@@ -132,7 +132,7 @@
             this.textBoxHeight.Name = "textBoxHeight";
             this.textBoxHeight.Size = new System.Drawing.Size(45, 20);
             this.textBoxHeight.TabIndex = 15;
-            this.textBoxHeight.Text = "4";
+            this.textBoxHeight.Text = "60";
             // 
             // labelHeight
             // 
@@ -203,7 +203,7 @@
             this.textBoxOffsetWidth.Name = "textBoxOffsetWidth";
             this.textBoxOffsetWidth.Size = new System.Drawing.Size(45, 20);
             this.textBoxOffsetWidth.TabIndex = 7;
-            this.textBoxOffsetWidth.Text = "3";
+            this.textBoxOffsetWidth.Text = "15";
             // 
             // textBoxOffsetLong
             // 
@@ -211,7 +211,7 @@
             this.textBoxOffsetLong.Name = "textBoxOffsetLong";
             this.textBoxOffsetLong.Size = new System.Drawing.Size(45, 20);
             this.textBoxOffsetLong.TabIndex = 6;
-            this.textBoxOffsetLong.Text = "4";
+            this.textBoxOffsetLong.Text = "25";
             // 
             // textBoxWidthUpperBase
             // 
@@ -219,7 +219,7 @@
             this.textBoxWidthUpperBase.Name = "textBoxWidthUpperBase";
             this.textBoxWidthUpperBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxWidthUpperBase.TabIndex = 5;
-            this.textBoxWidthUpperBase.Text = "3";
+            this.textBoxWidthUpperBase.Text = "45";
             // 
             // textBoxLongUpperBase
             // 
@@ -227,7 +227,7 @@
             this.textBoxLongUpperBase.Name = "textBoxLongUpperBase";
             this.textBoxLongUpperBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxLongUpperBase.TabIndex = 4;
-            this.textBoxLongUpperBase.Text = "4";
+            this.textBoxLongUpperBase.Text = "65";
             // 
             // textBoxWidthBottomBase
             // 
@@ -235,7 +235,7 @@
             this.textBoxWidthBottomBase.Name = "textBoxWidthBottomBase";
             this.textBoxWidthBottomBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxWidthBottomBase.TabIndex = 3;
-            this.textBoxWidthBottomBase.Text = "9";
+            this.textBoxWidthBottomBase.Text = "90";
             // 
             // textBoxLongBottomBase
             // 
@@ -243,7 +243,7 @@
             this.textBoxLongBottomBase.Name = "textBoxLongBottomBase";
             this.textBoxLongBottomBase.Size = new System.Drawing.Size(45, 20);
             this.textBoxLongBottomBase.TabIndex = 2;
-            this.textBoxLongBottomBase.Text = "12";
+            this.textBoxLongBottomBase.Text = "120";
             // 
             // buttonStart
             // 
@@ -705,10 +705,13 @@
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WindowsFormsApplication1.Properties.Settings.Default, "xXx", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.printPreviewDialog1.Document = this.printDocument1;
             this.printPreviewDialog1.Enabled = true;
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.ShowIcon = false;
+            this.printPreviewDialog1.Text = global::WindowsFormsApplication1.Properties.Settings.Default.xXx;
             this.printPreviewDialog1.Visible = false;
             // 
             // Form1
